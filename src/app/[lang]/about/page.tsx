@@ -17,40 +17,12 @@ export default function About() {
     threshold: 0.1,
   })
 
-  const { ref: teamRef, inView: teamInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
   const { ref: valuesRef, inView: valuesInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
 
   const { t } = useTranslation()
-
-  const teamMembers = [
-    {
-      name: 'John Smith',
-      role: 'CEO & Founder',
-      image: '/images/photo-1560250097-0b93528c311a.jpg?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'Creative Director',
-      image: '/images/photo-1494790108377-be9c29b29330.jpg?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Marketing Director',
-      image: '/images/photo-1519244703995-f4e0f30006d5.jpg?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Design Lead',
-      image: '/images/photo-1506794778202-cad84cf45f1d.jpg?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  ]
 
   const values = [
     {
@@ -185,46 +157,6 @@ export default function About() {
                 <div className="text-white mb-4">{value.icon}</div>
                 <h3 className="text-xl font-semibold mb-2 text-white">{value.title}</h3>
                 <p className="text-white/90">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section ref={teamRef} className="relative">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={teamInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">{t('about.team.title')}</h2>
-            <p className="text-lg md:text-xl text-white/90">
-              {t('about.team.subtitle')}
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={teamInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="relative w-48 h-48 mx-auto mb-4">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 192px) 192px, 192px"
-                    className="object-cover rounded-full"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-1 text-white">{member.name}</h3>
-                <p className="text-white/90">{member.role}</p>
               </motion.div>
             ))}
           </div>

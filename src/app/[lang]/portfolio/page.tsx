@@ -27,10 +27,8 @@ const PortfolioPage = () => {
 
   const categories = [
     { id: 'all', label: t('portfolio.filters.all') },
-    { id: 'web', label: t('portfolio.filters.web') },
     { id: 'branding', label: t('portfolio.filters.branding') },
     { id: 'marketing', label: t('portfolio.filters.marketing') },
-    { id: 'app', label: t('portfolio.filters.app') },
     { id: 'video', label: t('portfolio.filters.video') },
   ]
 
@@ -39,7 +37,7 @@ const PortfolioPage = () => {
       id: 'ecommerce',
       title: t('portfolio.projects.ecommerce.title'),
       description: t('portfolio.projects.ecommerce.description'),
-      category: 'web',
+      category: 'marketing',
       image: '/images/photo-1556741533-6e6a62bd8b49.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       client: t('portfolio.projects.ecommerce.client'),
       results: t('portfolio.projects.ecommerce.results'),
@@ -63,20 +61,11 @@ const PortfolioPage = () => {
       results: t('portfolio.projects.social.results'),
     },
     {
-      id: 'mobile',
-      title: t('portfolio.projects.mobile.title'),
-      description: t('portfolio.projects.mobile.description'),
-      category: 'app',
-      image: '/images/photo-1512941937669-90a1b58e7e9c.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-      client: t('portfolio.projects.mobile.client'),
-      results: t('portfolio.projects.mobile.results'),
-    },
-    {
       id: 'corporate',
       title: t('portfolio.projects.corporate.title'),
       description: t('portfolio.projects.corporate.description'),
-      category: 'web',
-      image: '/images/photo-1551434678-e076c223a692.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      category: 'branding',
+      image: '/images/ux-indonesia-qC2n6RQU4Vw-unsplash.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       client: t('portfolio.projects.corporate.client'),
       results: t('portfolio.projects.corporate.results'),
     },
@@ -102,7 +91,7 @@ const PortfolioPage = () => {
       id: 'fitness-app',
       title: 'Fitness App Development',
       description: 'Modern fitness tracking application with AI-powered workout recommendations',
-      category: 'app',
+      category: 'marketing',
       image: '/images/photo-1571019613454-1cb2f99b2d8b.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       client: 'FitLife',
       results: '500K+ downloads, 4.8/5 app store rating',
@@ -138,7 +127,7 @@ const PortfolioPage = () => {
       id: 'ui-redesign',
       title: 'UI/UX Redesign',
       description: 'Complete redesign of financial application interface',
-      category: 'web',
+      category: 'branding',
       image: '/images/photo-1551434678-e076c223a692.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
       client: 'FinTech Pro',
       results: '65% increase in user retention',
@@ -151,22 +140,24 @@ const PortfolioPage = () => {
 
   return (
     <main className="min-h-screen bg-gray-900">
-      {/* Hero Section with Canvas Background */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <BackgroundCanvas />
-        <div className="relative z-20 text-center text-white max-w-3xl mx-auto px-4">
-          <div className="relative h-full">
-            <div className="absolute inset-0">
-              <ParticleAnimation />
-            </div>
+      {/* Top Section with Particles */}
+      <div className="relative">
+        <div className="absolute inset-0">
+          <ParticleAnimation />
+        </div>
+
+        {/* Hero Section */}
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+          <BackgroundCanvas />
+          <div className="relative z-20 text-center text-white max-w-3xl mx-auto px-4">
             <AnimatedTitle
               title={t('portfolio.title')}
               subtitle={t('portfolio.subtitle')}
               className="relative z-20"
             />
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Category Filters */}
       <div

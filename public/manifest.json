@@ -1,16 +1,15 @@
 {
   "name": "Marketing Agency",
   "short_name": "Marketing",
-  "description": "Modern marketing agency website",
+  "description": "Your trusted partner in digital marketing",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#3B82F6",
+  "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "32x32",
-      "type": "image/svg+xml"
+      "src": "/favicon.ico",
+      "type": "image/png"
     }
   ]
-} 
+}

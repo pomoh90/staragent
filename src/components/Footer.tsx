@@ -104,8 +104,8 @@ export default function Footer() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: t('title'),
-    url: 'https://yourdomain.com',
-    logo: 'https://yourdomain.com/logo.png',
+    url: 'https://starzdustagency.com/en',
+    logo: '/images/logo.png',
     sameAs: socialLinks.map(link => link.href),
     contactPoint: {
       '@type': 'ContactPoint',
@@ -201,20 +201,15 @@ export default function Footer() {
             <motion.div variants={itemVariants} className="space-y-4">
               <h3 className="text-lg font-semibold">{t('contact.title')}</h3>
               <ul className="space-y-2">
-                <li className="text-gray-400">
-                  <span className="block text-white">{t('contact.address_label')}</span>
-                  {t('contact.address')}
+                <li>
+                  <a href={`mailto:${t('contact.email')}`} className="text-gray-400 hover:text-white transition-colors">
+                    {t('contact.email')}
+                  </a>
                 </li>
-                <li className="text-gray-400">
-                  <span className="block text-white">{t('contact.phone_label')}</span>
-                  {t('contact.phone')}
-                </li>
-                <li className="text-gray-400">
-                  <span className="block text-white">{t('contact.email_label')}</span>
-                  {t('contact.email')}
-                </li>
-                <li className="text-gray-400">
-                  {t('contact.hours')}
+                <li>
+                  <a href={`tel:${t('contact.phone')}`} className="text-gray-400 hover:text-white transition-colors">
+                    {t('contact.phone')}
+                  </a>
                 </li>
               </ul>
             </motion.div>

@@ -43,19 +43,17 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <AnimatedLogo
-            text={t('brand', { ns: 'common' })}
             href={getLocalizedPath('/', currentLocale)}
-            color="rgb(125, 211, 252)"
           />
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 h-full">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={getLocalizedPath(item.href, currentLocale)}
-                className={`text-sm font-medium transition-colors duration-300 ${
+                className={`text-sm font-medium transition-colors duration-300 flex items-center h-full ${
                   scrolled ? 'text-gray-900 hover:text-primary-600' : 'text-white hover:text-primary-300'
                 }`}
               >
@@ -64,7 +62,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center h-full">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-md ${
@@ -106,4 +104,4 @@ export default function Navbar() {
       </AnimatePresence>
     </motion.nav>
   )
-} 
+}

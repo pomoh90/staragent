@@ -2,14 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 interface AnimatedLogoProps {
-  text: string
   href: string
-  color: string
 }
 
-export default function AnimatedLogo({ text, href, color }: AnimatedLogoProps) {
+export default function AnimatedLogo({ href }: AnimatedLogoProps) {
   const router = useRouter()
 
   const handleClick = () => {
@@ -17,25 +16,23 @@ export default function AnimatedLogo({ text, href, color }: AnimatedLogoProps) {
   }
 
   return (
-    <motion.div 
-      className="relative h-12 cursor-pointer overflow-visible"
+    <motion.div
+      className="relative h-20 w-32 cursor-pointer overflow-visible flex items-center"
       onClick={handleClick}
-      style={{ width: text.length * 16 }}
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="absolute inset-0 flex items-center justify-start">
-        {text.split('').map((letter, index) => (
-          <span
-            key={index}
-            className="text-2xl font-bold transition-colors duration-300"
-            style={{ color }}
-          >
-            {letter}
-          </span>
-        ))}
+      <div className="relative w-full h-full flex items-center">
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={128}
+          height={48}
+          className="object-contain"
+          style={{ marginTop: '20px' }}
+        />
       </div>
     </motion.div>
   )
-} 
+}
