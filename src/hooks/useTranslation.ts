@@ -3,7 +3,7 @@ import en from '../locales/en.json'
 import ru from '../locales/ru.json'
 
 type TranslationKey = string
-type TranslationValue = string | { [key: string]: TranslationValue }
+type TranslationValue = string | { [key: string]: TranslationValue } | TranslationValue[]
 
 const translations = {
   en,
@@ -19,7 +19,15 @@ export function useTranslation() {
       let value: TranslationValue = translations[locale]
 
       for (const k of keys) {
-        if (typeof value === 'object' && value !== null && k in value) {
+        if (Array.isArray(value)) {
+          const index = parseInt(k, 10)
+          if (!isNaN(index) && index >= 0 && index < value.length) {
+            value = value[index]
+          } else {
+            console.warn(`Invalid array index: ${k}`)
+            return key
+          }
+        } else if (typeof value === 'object' && value !== null && k in value) {
           value = value[k]
         } else {
           console.warn(`Translation key not found: ${key}`)
@@ -40,4 +48,4 @@ export function useTranslation() {
   }
 
   return { t, locale }
-} 
+}
