@@ -45,7 +45,7 @@ export default function ParticleAnimation({ className = '' }: ParticleAnimationP
   }, [])
 
   return (
-    <div className={`fixed inset-0 pointer-events-none ${className}`}>
+    <div className={`absolute inset-0 pointer-events-none overflow-hidden ${className}`}>
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -62,14 +62,14 @@ export default function ParticleAnimation({ className = '' }: ParticleAnimationP
           }}
           animate={{
             x: [
-              `${Math.cos(particle.direction) * particle.speed}vw`,
-              `${Math.cos(particle.direction + Math.PI) * particle.speed}vw`,
-              `${Math.cos(particle.direction) * particle.speed}vw`
+              `${Math.cos(particle.direction) * particle.speed}%`,
+              `${Math.cos(particle.direction + Math.PI) * particle.speed}%`,
+              `${Math.cos(particle.direction) * particle.speed}%`
             ],
             y: [
-              `${Math.sin(particle.direction) * particle.speed}vh`,
-              `${Math.sin(particle.direction + Math.PI) * particle.speed}vh`,
-              `${Math.sin(particle.direction) * particle.speed}vh`
+              `${Math.sin(particle.direction) * particle.speed}%`,
+              `${Math.sin(particle.direction + Math.PI) * particle.speed}%`,
+              `${Math.sin(particle.direction) * particle.speed}%`
             ],
             scale: [1, 1.2, 1],
             opacity: [0.6, 1, 0.6]
@@ -85,4 +85,4 @@ export default function ParticleAnimation({ className = '' }: ParticleAnimationP
       ))}
     </div>
   )
-} 
+}
