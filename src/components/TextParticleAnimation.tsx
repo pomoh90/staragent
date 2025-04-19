@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 
 interface Particle {
@@ -36,7 +36,7 @@ const TextParticleAnimation = ({
   const [particles, setParticles] = useState<Particle[]>([])
   const router = useRouter()
 
-  const createParticles = (ctx: CanvasRenderingContext2D) => {
+  const createParticles = useCallback((ctx: CanvasRenderingContext2D) => {
     const tempCanvas = document.createElement('canvas')
     const tempCtx = tempCanvas.getContext('2d')
     if (!tempCtx) return []
@@ -74,9 +74,9 @@ const TextParticleAnimation = ({
     }
 
     return newParticles
-  }
+  }, [text, fontSize, color, particleSize])
 
-  const animate = (ctx: CanvasRenderingContext2D, particles: Particle[]) => {
+  const animate = useCallback((ctx: CanvasRenderingContext2D, particles: Particle[]) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
 
     if (!isExploding) {
@@ -108,7 +108,7 @@ const TextParticleAnimation = ({
     if (updatedParticles.length === 0 && href) {
       router.push(href)
     }
-  }
+  }, [isExploding, text, fontSize, color, href, router])
 
   useEffect(() => {
     const canvas = canvasRef.current
