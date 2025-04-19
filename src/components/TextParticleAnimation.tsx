@@ -139,7 +139,7 @@ const TextParticleAnimation = ({
       window.removeEventListener('resize', resizeCanvas)
       cancelAnimationFrame(animationId)
     }
-  }, [isExploding, particles, text, fontSize, color, particleSize])
+  }, [isExploding, particles, text, fontSize, color, particleSize, animate, createParticles])
 
   const handleClick = () => {
     if (href) {
@@ -156,4 +156,4 @@ const TextParticleAnimation = ({
   )
 }
 
-export default TextParticleAnimation 
+export default TextParticleAnimation
