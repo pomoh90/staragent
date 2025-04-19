@@ -1,8 +1,6 @@
 'use client'
 
 export const dynamic = 'force-dynamic'
-export const revalidate = false
-export const fetchCache = 'force-no-store'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
