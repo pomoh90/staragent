@@ -1,7 +1,7 @@
 'use client'
 
 export const dynamic = 'error'
-export const revalidate = false
+export const revalidate = 0
 export const fetchCache = 'force-no-store'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
