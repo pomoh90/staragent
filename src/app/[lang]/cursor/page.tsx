@@ -42,18 +42,18 @@ const CursorPage = () => {
 
   const services = [
     {
-      title: t('services.digital_marketing.title'),
-      description: t('services.digital_marketing.description'),
+      title: t('cursor.services.digital_marketing.title'),
+      description: t('cursor.services.digital_marketing.description'),
       icon: '/icons/marketing.svg',
     },
     {
-      title: t('services.brand_strategy.title'),
-      description: t('services.brand_strategy.description'),
+      title: t('cursor.services.brand_strategy.title'),
+      description: t('cursor.services.brand_strategy.description'),
       icon: '/icons/branding.svg',
     },
     {
-      title: t('services.web_development.title'),
-      description: t('services.web_development.description'),
+      title: t('cursor.services.web_development.title'),
+      description: t('cursor.services.web_development.description'),
       icon: '/icons/web.svg',
     },
   ]
