@@ -5,7 +5,6 @@ import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
 import { useTranslation } from '@/hooks/useTranslation'
 import { type Locale } from '@/i18n/locales'
-import NetworkMap from '@/components/NetworkMap'
 
 export default function About() {
   const { ref: heroRef, inView: heroInView } = useInView({
@@ -106,10 +105,6 @@ export default function About() {
             className="object-cover brightness-50"
             priority
           />
-          {/* Network Map Overlay */}
-          <div className="absolute inset-0 z-10 opacity-40 mix-blend-screen">
-            <NetworkMap />
-          </div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 py-16">
           <motion.h1
@@ -133,12 +128,7 @@ export default function About() {
 
       {/* Mission Section */}
       <section ref={missionRef} className="relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 opacity-30 mix-blend-screen">
-            <NetworkMap />
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -171,12 +161,7 @@ export default function About() {
 
       {/* Values Section */}
       <section ref={valuesRef} className="relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 opacity-30 mix-blend-screen">
-            <NetworkMap />
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={valuesInView ? { opacity: 1, y: 0 } : {}}
@@ -208,12 +193,7 @@ export default function About() {
 
       {/* Team Section */}
       <section ref={teamRef} className="relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 opacity-30 mix-blend-screen">
-            <NetworkMap />
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={teamInView ? { opacity: 1, y: 0 } : {}}

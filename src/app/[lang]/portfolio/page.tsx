@@ -155,8 +155,10 @@ const PortfolioPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <BackgroundCanvas />
         <div className="relative z-20 text-center text-white max-w-3xl mx-auto px-4">
-          <div className="relative">
-            <ParticleAnimation />
+          <div className="relative h-full">
+            <div className="absolute inset-0">
+              <ParticleAnimation />
+            </div>
             <AnimatedTitle
               title={t('portfolio.title')}
               subtitle={t('portfolio.subtitle')}
