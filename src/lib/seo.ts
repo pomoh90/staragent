@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 
+type OpenGraphType = "article" | "website" | "book" | "profile" | "music.song" | "music.album" | "music.playlist" | "music.radio_station" | "video.movie" | "video.episode" | "video.tv_show" | "video.other";
+type TwitterCardType = "summary" | "summary_large_image" | "player" | "app";
+
 export type SEOProps = {
   title: string;
   description: string;
@@ -7,7 +10,7 @@ export type SEOProps = {
   openGraph?: {
     title?: string;
     description?: string;
-    type?: string;
+    type?: OpenGraphType;
     url?: string;
     images?: {
       url: string;
@@ -17,7 +20,7 @@ export type SEOProps = {
     }[];
   };
   twitter?: {
-    card?: string;
+    card?: TwitterCardType;
     title?: string;
     description?: string;
     images?: string[];
@@ -194,4 +197,4 @@ export const defaultStructuredData = {
     'https://instagram.com/yourhandle',
     'https://linkedin.com/company/yourcompany',
   ],
-} 
+}
