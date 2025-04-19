@@ -1,0 +1,319 @@
+{
+  "common": {
+    "language": "Language",
+    "en": "English",
+    "ru": "Russian",
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "brand": "Marketing Agency"
+  },
+  "nav": {
+    "brand": "STARZDUST",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Transform Your Digital Presence",
+      "subtitle": "We help businesses grow through innovative digital marketing solutions",
+      "cta": "Start Your Journey"
+    },
+    "features": {
+      "title": "Our Features",
+      "subtitle": "Comprehensive solutions for your digital success",
+      "digitalMarketing": {
+        "title": "Digital Marketing",
+        "description": "Strategic campaigns that drive results and increase your online presence"
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "description": "Improve your search rankings and attract more organic traffic"
+      },
+      "socialMedia": {
+        "title": "Social Media",
+        "description": "Engage with your audience and build a strong social presence"
+      },
+      "content": {
+        "title": "Content Creation",
+        "description": "Compelling content that tells your story and connects with your audience"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive digital marketing solutions for your business"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Success stories from businesses we've helped grow",
+      "items": [
+        {
+          "name": "John Smith",
+          "role": "CEO of Tech Solutions",
+          "content": "Working with this agency has been transformative for our business. Their strategic approach and attention to detail have helped us achieve impressive results in record time.",
+          "image": "/images/photo-1560250097-0b93528c311a.jpg?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        },
+        {
+          "name": "Sarah Johnson",
+          "role": "Marketing Director at Growth Co",
+          "content": "The team's dedication and innovative thinking have significantly improved our digital marketing performance. They truly understand our vision and help bring it to life.",
+          "image": "/images/photo-1494790108377-be9c29b29330.jpg"
+        },
+        {
+          "name": "Michael Chen",
+          "role": "Founder of Digital Innovations",
+          "content": "Their comprehensive approach and professionalism have exceeded our expectations. They don't just complete tasks but provide innovative solutions for business growth.",
+          "image": "/images/photo-1519244703995-f4e0f30006d5.jpg"
+        }
+      ]
+    },
+    "title": "Transform Your Digital Presence",
+    "subtitle": "We help businesses grow through innovative marketing strategies and creative solutions.",
+    "cta": {
+      "title": "Ready to Transform Your Digital Presence?",
+      "subtitle": "Let's work together to take your business to the next level",
+      "button": "Get Started Now"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We are a team of passionate marketers, designers, and developers dedicated to helping businesses succeed in the digital world.",
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "The principles that guide everything we do",
+      "items": {
+        "innovation": {
+          "title": "Innovation",
+          "description": "We constantly push boundaries and explore new ideas to deliver cutting-edge solutions."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "We strive for perfection in every project, ensuring the highest quality standards."
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "We believe in the power of teamwork and work closely with our clients to achieve success."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "We maintain open communication and clear processes in all our operations."
+        }
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To empower businesses with innovative digital solutions that drive growth and create lasting impact. We believe in combining creativity with data-driven strategies to deliver exceptional results for our clients."
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the creative minds behind our success"
+    },
+    "common": {
+      "learnMore": "Learn More"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Digital Marketing Solutions",
+    "description": "Transform your business with our cutting-edge digital marketing services",
+    "digital_marketing": {
+      "title": "Digital Marketing",
+      "description": "Strategic online campaigns to boost your brand visibility and reach"
+    },
+    "content_creation": {
+      "title": "Content Creation",
+      "description": "Engaging content that tells your brand story and resonates with your audience"
+    },
+    "social_media": {
+      "title": "Social Media",
+      "description": "Building and maintaining a strong social media presence across all platforms"
+    },
+    "analytics_seo": {
+      "title": "Analytics & SEO",
+      "description": "Data analysis and optimization to improve your online performance"
+    },
+    "stats": {
+      "clients": "Happy Clients",
+      "projects": "Projects Completed",
+      "team": "Team Members",
+      "experience": "Years of Experience"
+    },
+    "brand_strategy": {
+      "title": "Brand Strategy",
+      "description": "Develop a strong brand identity that resonates with your target audience. We help you define your brand's voice, values, and visual identity."
+    },
+    "web_development": {
+      "title": "Web Development",
+      "description": "Modern, responsive websites that convert visitors into customers. We create fast, secure, and user-friendly websites that drive results."
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "See how we've helped businesses grow and succeed",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "branding": "Branding",
+      "marketing": "Marketing",
+      "app": "App",
+      "video": "Video"
+    },
+    "projects": {
+      "ecommerce": {
+        "title": "E-commerce Redesign",
+        "description": "Complete redesign of an online store with improved user experience and increased conversion rates by 45%.",
+        "client": "Fashion Forward",
+        "category": "web",
+        "results": "Increased conversion rate by 45%, reduced bounce rate by 30%"
+      },
+      "branding": {
+        "title": "Brand Identity",
+        "description": "Development of a comprehensive brand identity system for a tech startup, including logo, color scheme, and brand guidelines.",
+        "client": "Tech Innovators",
+        "category": "branding",
+        "results": "Brand recognition increased by 60% in target market"
+      },
+      "social": {
+        "title": "Social Media Campaign",
+        "description": "Successful social media campaign that increased engagement by 300% and generated 50,000 new followers.",
+        "client": "Food & Co",
+        "category": "marketing",
+        "results": "300% increase in engagement, 50,000 new followers"
+      },
+      "mobile": {
+        "title": "Mobile App Design",
+        "description": "Design and development of a fitness tracking mobile application with personalized workout plans.",
+        "client": "FitLife",
+        "category": "app",
+        "results": "100,000+ downloads, 4.8/5 app store rating"
+      },
+      "corporate": {
+        "title": "Corporate Website",
+        "description": "Modern corporate website with integrated blog and customer portal.",
+        "client": "Global Solutions",
+        "category": "web",
+        "results": "Increased lead generation by 75%"
+      },
+      "packaging": {
+        "title": "Product Packaging",
+        "description": "Sustainable packaging design for an eco-friendly product line.",
+        "client": "Green Living",
+        "category": "branding",
+        "results": "Sales increased by 40% after redesign"
+      },
+      "video": {
+        "title": "Product Launch Video",
+        "description": "Creative video production for a new product launch campaign.",
+        "client": "Innovate Tech",
+        "category": "video",
+        "results": "2M+ views, 500% increase in product inquiries"
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "description": "Comprehensive SEO strategy implementation for an e-commerce platform.",
+        "client": "ShopSmart",
+        "category": "marketing",
+        "results": "Organic traffic increased by 200%, top 3 rankings for key terms"
+      },
+      "ui": {
+        "title": "UI/UX Redesign",
+        "description": "Complete user interface and experience redesign for a financial app.",
+        "client": "FinTech Pro",
+        "category": "app",
+        "results": "User retention increased by 65%, 4.9/5 app store rating"
+      },
+      "content": {
+        "title": "Content Strategy",
+        "description": "Development and implementation of a content marketing strategy.",
+        "client": "Content Kings",
+        "category": "marketing",
+        "results": "300% increase in organic traffic, 200% more leads"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "form": {
+      "title": "Send us a Message",
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "address": "123 Marketing Street, Digital City, 12345",
+      "phone": "+1 (323) 336-7307",
+      "email": "Starzdustllc@gmail.com",
+      "hours": "Monday - Friday: 9:00 AM - 6:00 PM"
+    }
+  },
+  "footer": {
+    "title": "Marketing Agency",
+    "description": "STARZDUST agency - Where creativity meets innovation in digital marketing. We transform brands through cutting-edge strategies and stellar results.",
+    "quick_links": "Quick Links",
+    "quick_links_items": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address_label": "Address:",
+      "address": "123 Marketing Street, Digital City, 12345",
+      "phone_label": "Phone:",
+      "phone": "+1 (323) 336-7307",
+      "email_label": "Email:",
+      "email": "Starzdustllc@gmail.com",
+      "hours": "Monday - Friday: 9:00 AM - 6:00 PM"
+    },
+    "social": "Social",
+    "social_items": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "rights": "© 2024 Marketing Agency. All rights reserved."
+  },
+  "cursor": {
+    "title": "Your Digital Transformation Starts Here",
+    "subtitle": "Explore the cutting-edge services that bring your brand to life",
+    "cta": "Start Your Project",
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive digital marketing solutions for your business"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "subtitle": "We deliver exceptional results through innovation and expertise"
+    },
+    "portfolio": {
+      "title": "Our Work",
+      "subtitle": "See how we've helped businesses grow and succeed"
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "We'd love to hear from you",
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send Message"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Digital Presence?",
+    "subtitle": "Let's work together to take your business to the next level",
+    "button": "Get Started Today"
+  }
+}

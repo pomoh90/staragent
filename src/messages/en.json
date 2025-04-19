@@ -1,0 +1,41 @@
+{
+  "Index": {
+    "home": {
+      "hero": {
+        "title": "Transform Your Digital Presence",
+        "subtitle": "We help businesses grow through innovative digital marketing strategies"
+      },
+      "services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive solutions for your digital success"
+      },
+      "testimonials": {
+        "title": "What Our Clients Say",
+        "subtitle": "Success stories from businesses we've helped grow"
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "subtitle": "Your trusted partner in digital marketing",
+      "mission": {
+        "content": "We are dedicated to helping businesses thrive in the digital age through innovative marketing solutions"
+      }
+    },
+    "contact": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Let's discuss how we can help you achieve your goals"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "common": {
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "contactUs": "Contact Us"
+    }
+  }
+} 

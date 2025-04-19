@@ -1,0 +1,16 @@
+{
+  "name": "Marketing Agency",
+  "short_name": "Marketing",
+  "description": "Modern marketing agency website",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    }
+  ]
+} 

@@ -1,0 +1,10 @@
+.next
+node_modules
+public
+build
+dist
+coverage
+*.log
+*.lock
+*.tsbuildinfo
+next-env.d.ts 
