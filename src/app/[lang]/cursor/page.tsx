@@ -1,5 +1,7 @@
 'use client'
 
+export const dynamic = 'force-dynamic'
+
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from '@/hooks/useTranslation'
@@ -290,4 +292,4 @@ const CursorPage = () => {
   )
 }
 
-export default CursorPage 
+export default CursorPage
