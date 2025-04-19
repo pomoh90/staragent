@@ -6,9 +6,12 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from '@/hooks/useTranslation'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stars } from '@react-three/drei'
+import { useEffect, useRef, Suspense } from 'react'
+import dynamicImport from 'next/dynamic'
+
+const DynamicCanvas = dynamicImport(() => import('@react-three/fiber').then(mod => mod.Canvas), { ssr: false })
+const DynamicOrbitControls = dynamicImport(() => import('@react-three/drei').then(mod => mod.OrbitControls), { ssr: false })
+const DynamicStars = dynamicImport(() => import('@react-three/drei').then(mod => mod.Stars), { ssr: false })
 
 const CursorPage = () => {
   const { t } = useTranslation()
@@ -84,10 +87,10 @@ const CursorPage = () => {
         className="relative h-screen flex items-center justify-center overflow-hidden"
       >
         <div className="absolute inset-0">
-          <Canvas>
-            <OrbitControls enableZoom={false} />
-            <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
-          </Canvas>
+          <DynamicCanvas>
+            <DynamicOrbitControls enableZoom={false} />
+            <DynamicStars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
+          </DynamicCanvas>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -232,10 +235,10 @@ const CursorPage = () => {
         className="py-20 relative"
       >
         <div className="absolute inset-0">
-          <Canvas>
-            <OrbitControls enableZoom={false} />
-            <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
-          </Canvas>
+          <DynamicCanvas>
+            <DynamicOrbitControls enableZoom={false} />
+            <DynamicStars radius={100} depth={50} count={5000} factor={4} saturation={0} fade />
+          </DynamicCanvas>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
