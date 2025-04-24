@@ -35,11 +35,28 @@ export default function Contact() {
     setSubmitStatus('idle')
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+
+      const data = await response.json()
+
+      if (data.success) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        throw new Error(data.error || 'Failed to submit form')
+      }
     } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -72,18 +89,18 @@ export default function Contact() {
 
       {/* Content */}
       <div className="container mx-auto px-4 py-12 relative z-20">
-        <div className="max-w-4xl mx-auto bg-white/80 backdrop-blur-lg rounded-lg shadow-xl p-8">
+        <div className="max-w-4xl mx-auto bg-white/80 backdrop-blur-lg rounded-lg shadow-xl p-8 md:p-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
             Contact Us
           </h1>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
             {/* Contact Form */}
-            <div>
+            <div className="w-full">
               <h2 className="text-2xl font-semibold mb-6 text-[rgb(59,130,246,0.5)]">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-900">
                     Name
                   </label>
                   <input
@@ -92,11 +109,11 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-900">
                     Email
                   </label>
                   <input
@@ -105,11 +122,24 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-900">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-900">
                     Message
                   </label>
                   <textarea
@@ -118,7 +148,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
                   ></textarea>
                 </div>
                 <button
@@ -141,17 +171,16 @@ export default function Contact() {
             <div>
               <h2 className="text-2xl font-semibold mb-6 text-[rgb(59,130,246,0.5)]">Get in touch</h2>
               <div className="space-y-6">
-                <div>
+                {/* <div>
                   <h3 className="text-lg font-medium text-gray-900">Address</h3>
                   <p className="mt-2 text-gray-600">
-                    123 Marketing Street<br />
-                    New York, NY 10001
+
                   </p>
-                </div>
+                </div> */}
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Email</h3>
                   <p className="mt-2 text-gray-600">
-                    contact@marketingagency.com
+                    Starzdustllc@gmail.com
                   </p>
                 </div>
                 <div>

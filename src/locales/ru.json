@@ -287,12 +287,22 @@
     "rights": "© 2024 Marketing Agency. All rights reserved."
   },
   "cursor": {
-    "title": "Your Digital Transformation Starts Here",
-    "subtitle": "Explore the cutting-edge services that bring your brand to life",
+    "title": "Cursor Marketing Solutions",
+    "subtitle": "Innovative digital marketing strategies for your business growth",
     "cta": "Start Your Project",
     "services": {
-      "title": "Our Services",
-      "subtitle": "Comprehensive digital marketing solutions for your business"
+      "digital_marketing": {
+        "title": "Digital Marketing",
+        "description": "Comprehensive digital marketing strategies to boost your online presence"
+      },
+      "brand_strategy": {
+        "title": "Brand Strategy",
+        "description": "Strategic branding solutions to establish your market position"
+      },
+      "web_development": {
+        "title": "Web Development",
+        "description": "Custom web solutions to enhance your digital footprint"
+      }
     },
     "features": {
       "title": "Why Choose Us",

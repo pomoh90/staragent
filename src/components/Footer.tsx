@@ -82,7 +82,7 @@ export default function Footer() {
     },
     {
       name: t('social_items.instagram'),
-      href: '#',
+      href: 'https://www.instagram.com/starzdustagency/',
       icon: InstagramIcon,
     },
     {

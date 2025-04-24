@@ -182,14 +182,14 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <div>
+                  {/* <div>
                     <h3 className="font-medium text-gray-900">Our Location</h3>
                     <p className="text-gray-600">
                       123 Marketing Street, Suite 100
                       <br />
                       New York, NY 10001
                     </p>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -207,10 +207,10 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <div>
+                  {/* <div>
                     <h3 className="font-medium text-gray-900">Email Us</h3>
                     <p className="text-gray-600">hello@marketingagency.com</p>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">

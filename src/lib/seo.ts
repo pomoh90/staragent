@@ -171,13 +171,12 @@ export const defaultStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Creative Agency',
-  url: 'https://yourdomain.com',
-  logo: 'https://yourdomain.com/logo.png',
+  url: 'https://starzdustagency.com/',
+  logo: 'https://starzdustagency.com/logo.png',
   description:
     'Creative Agency specializes in digital marketing, web development, and brand strategy. We help businesses grow their online presence with innovative solutions.',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '123 Main St',
     addressLocality: 'City',
     addressRegion: 'State',
     postalCode: '12345',
@@ -185,16 +184,13 @@ export const defaultStructuredData = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-555-555-5555',
+    telephone: '+1-323-336-7307',
     contactType: 'customer service',
-    email: 'contact@yourdomain.com',
+    email: 'Starzdustllc@gmail.com',
     areaServed: 'US',
     availableLanguage: ['English'],
   },
   sameAs: [
-    'https://facebook.com/yourpage',
-    'https://twitter.com/yourhandle',
-    'https://instagram.com/yourhandle',
-    'https://linkedin.com/company/yourcompany',
+    'https://www.instagram.com/starzdustagency',
   ],
 }
