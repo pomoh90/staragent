@@ -8,12 +8,6 @@ import { useState } from 'react'
 import NetworkMap from '@/components/NetworkMap'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
@@ -34,26 +28,23 @@ export default function Contact() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
+    const form = e.target as HTMLFormElement
+    const formData = new FormData(form)
+
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formspree.io/f/xeogodkl', {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+          'Accept': 'application/json'
+        }
       })
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form')
-      }
-
-      const data = await response.json()
-
-      if (data.success) {
+      if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', subject: '', message: '' })
+        form.reset()
       } else {
-        throw new Error(data.error || 'Failed to submit form')
+        throw new Error('Failed to submit form')
       }
     } catch (error) {
       console.error('Form submission error:', error)
@@ -61,11 +52,6 @@ export default function Contact() {
     } finally {
       setIsSubmitting(false)
     }
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
   }
 
   return (
@@ -98,7 +84,13 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="w-full">
               <h2 className="text-2xl font-semibold mb-6 text-[rgb(59,130,246,0.5)]">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                action="https://formspree.io/f/xeogodkl"
+                method="POST"
+                referrerPolicy="origin-when-cross-origin"
+                className="space-y-6"
+              >
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-900">
                     Name
@@ -107,8 +99,7 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
                   />
                 </div>
@@ -120,8 +111,7 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
                   />
                 </div>
@@ -133,8 +123,7 @@ export default function Contact() {
                     type="text"
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
+                    required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
                   />
                 </div>
@@ -145,8 +134,7 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    required
                     rows={4}
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-gray-900 px-4 py-2"
                   ></textarea>

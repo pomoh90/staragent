@@ -37,7 +37,7 @@ export const generateMetadata = ({
   return {
     title,
     description,
-    metadataBase: new URL('https://yourdomain.com'),
+    metadataBase: new URL('https://starzdustagency.com'),
     alternates: {
       canonical: canonical || '/',
     },
@@ -57,7 +57,7 @@ export const generateMetadata = ({
     },
     twitter: {
       card: twitter?.card || 'summary_large_image',
-      site: twitter?.site || '@yourhandle',
+      site: twitter?.site || '@starzdustagency',
       title: twitter?.title || title,
       description: twitter?.description || description,
       images: twitter?.image || '/og-image.jpg',
@@ -92,4 +92,4 @@ export const SEO = ({
       )}
     </>
   );
-}; 
+};

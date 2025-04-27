@@ -1,35 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' })
-  }
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -65,7 +38,14 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formspree.io/f/mvgagyay"
+                method="POST"
+                encType="multipart/form-data"
+                className="space-y-6"
+              >
+                <input type="hidden" name="_next" value="https://your-domain.com/thank-you" />
+                <input type="hidden" name="_subject" value="New Contact Form Submission" />
                 <div>
                   <label
                     htmlFor="name"
@@ -77,8 +57,6 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
                   />
@@ -94,8 +72,6 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
                   />
@@ -111,8 +87,6 @@ export default function Contact() {
                     type="text"
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
                   />
@@ -127,22 +101,17 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
                   />
                 </div>
-                <motion.button
+                <button
                   type="submit"
                   className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </motion.button>
+                  Send Message
+                </button>
               </form>
             </motion.div>
 
@@ -182,14 +151,6 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  {/* <div>
-                    <h3 className="font-medium text-gray-900">Our Location</h3>
-                    <p className="text-gray-600">
-                      123 Marketing Street, Suite 100
-                      <br />
-                      New York, NY 10001
-                    </p>
-                  </div> */}
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -207,10 +168,6 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  {/* <div>
-                    <h3 className="font-medium text-gray-900">Email Us</h3>
-                    <p className="text-gray-600">hello@marketingagency.com</p>
-                  </div> */}
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">

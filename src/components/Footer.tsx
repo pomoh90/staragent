@@ -72,12 +72,12 @@ export default function Footer() {
   const socialLinks = [
     {
       name: t('social_items.facebook'),
-      href: '#',
+      href: 'https://www.facebook.com/profile.php?id=61558545492790&mibextid=wwXIfr',
       icon: FacebookIcon,
     },
     {
       name: t('social_items.twitter'),
-      href: '#',
+      href: 'https://x.com/starzdustagency',
       icon: TwitterIcon,
     },
     {

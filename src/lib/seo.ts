@@ -63,14 +63,14 @@ export const defaultSEO: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL('https://starzdustagency.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yourdomain.com',
+    url: 'https://starzdustagency.com',
     siteName: 'Creative Agency',
     title: 'Creative Agency - Digital Marketing & Web Development',
     description:
@@ -90,7 +90,7 @@ export const defaultSEO: Metadata = {
     description:
       'Creative Agency specializes in digital marketing, web development, and brand strategy. We help businesses grow their online presence with innovative solutions.',
     images: ['/og-image.jpg'],
-    creator: '@yourhandle',
+    creator: '@starzdustagency',
   },
   robots: {
     index: true,
