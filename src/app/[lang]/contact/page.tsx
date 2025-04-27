@@ -88,7 +88,6 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 action="https://formspree.io/f/xeogodkl"
                 method="POST"
-                referrerPolicy="origin-when-cross-origin"
                 className="space-y-6"
               >
                 <div>
